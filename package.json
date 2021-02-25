@@ -1,0 +1,29 @@
+{
+  "name": "team-dashboard",
+  "version": "1.0.0",
+  "description": "creates a html file that displays team basic info",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTiiiim/team-dashboard.git"
+  },
+  "author": "Tim Scott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheTiiiim/team-dashboard/issues"
+  },
+  "homepage": "https://github.com/TheTiiiim/team-dashboard#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
