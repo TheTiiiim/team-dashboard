@@ -32,11 +32,11 @@ describe("Engineer", () => {
         });
     });
 
-    describe("getOfficeNumber", () => {
+    describe("getGithub", () => {
         it("should return correct office number", () => {
-            const officeNumber = 3;
-            const e = new Engineer(0, "", "", officeNumber);
-            expect(e.getOfficeNumber()).toEqual(officeNumber);
+            const github = "TheTiiiim";
+            const e = new Engineer(0, "", "", github);
+            expect(e.getGithub()).toEqual(github);
         });
     });
 });
