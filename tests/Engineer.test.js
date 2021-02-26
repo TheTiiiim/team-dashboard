@@ -8,6 +8,7 @@ describe("Engineer", () => {
             expect(e.getId()).toEqual(id);
         });
     });
+
     describe("getName", () => {
         it("should return correct name", () => {
             const name = "jason";
@@ -15,6 +16,7 @@ describe("Engineer", () => {
             expect(e.getName()).toEqual(name);
         });
     });
+
     describe("getEmail", () => {
         it("should return correct email", () => {
             const email = "jason";
@@ -22,12 +24,14 @@ describe("Engineer", () => {
             expect(e.getEmail()).toEqual(email);
         });
     });
+
     describe("getRole", () => {
         it("should return correct role", () => {
             const e = new Engineer(0, "", "", 0);
             expect(e.getRole()).toEqual("Engineer");
         });
     });
+
     describe("getOfficeNumber", () => {
         it("should return correct office number", () => {
             const officeNumber = 3;
