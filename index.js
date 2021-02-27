@@ -1,6 +1,4 @@
-const fs = require("fs");
-const fsPromise = fs.promises;
-const path = require('path');
+const inquirer = require("inquirer");
 
 const Generator = require("./lib/Generator");
 const Employee = require("./lib/Employee")
@@ -10,19 +8,8 @@ const Intern = require("./lib/Intern")
 
 let employees = [];
 
-Generator.generateHtml(employees).then((data) => {
-	// get output directory
-	let dir = path.join(__dirname, "dist")
-	let file = path.join(dir, "dashboard.html")
+// TODO: use inquirer to get input to populate employees array
 
-	// ensure directory exists
-	if (!fs.existsSync(dir)) {
-		fs.mkdirSync(dir);
-	}
-
-	return fsPromise.writeFile(file, data).then(() => {
-		console.log("Team dashboard created!");
-	});
-}).catch((err) => {
+Generator.generateOutput(employees).catch((err) => {
 	console.error(err);
 });
