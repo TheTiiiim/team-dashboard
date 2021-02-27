@@ -34,7 +34,7 @@ describe("Engineer", () => {
 
     describe("getGithub", () => {
         it("should return correct office number", () => {
-            const github = "TheTiiiim";
+            const github = "username";
             const e = new Engineer(0, "", "", github);
             expect(e.getGithub()).toEqual(github);
         });
