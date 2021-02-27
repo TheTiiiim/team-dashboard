@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%
+}
+
+nav.navbar {
+    height: 15%;
+}
+
+div.container {
+    height: 85%;
+}
+
+.card {
+    margin-bottom: 40px;
+}
