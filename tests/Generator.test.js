@@ -35,14 +35,4 @@ describe("Generator", () => {
             expect(engineerCard).toEqual(expected);
         });
     });
-
-    // describe("generateHtml", () => {
-    //     it("generates one card", () => {
-    //         let engineer = new Engineer(0, "Name", "email@example.com", "username");
-
-    //         return Generator.generateHtml([engineer]).then(data => {
-    //             expect(data).toBe("peanut butter");
-    //         });
-    //     });
-    // });
 });
