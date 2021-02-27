@@ -1,15 +1,13 @@
-const inquirer = require("inquirer");
-
 const Generator = require("./lib/Generator");
-const Employee = require("./lib/Employee")
-const Manager = require("./lib/Manager")
-const Engineer = require("./lib/Engineer")
-const Intern = require("./lib/Intern")
 
-let employees = [];
+function main() {
+	console.log("\nWelcome to the Team Dashboard Generator!\n");
 
-// TODO: use inquirer to get input to populate employees array
+	Generator.generateEmployees().then((employees) => {
+		return Generator.generateOutput(employees);
+	}).catch((err) => {
+		console.error(err);
+	});
+}
 
-Generator.generateOutput(employees).catch((err) => {
-	console.error(err);
-});
+main();
