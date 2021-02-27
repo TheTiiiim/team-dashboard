@@ -7,10 +7,14 @@ nav.navbar {
     height: 15%;
 }
 
+a.navbar-brand {
+    margin: 0;
+}
+
 div.container {
     height: 85%;
 }
 
-.card {
+.col {
     margin-bottom: 40px;
 }
