@@ -10,7 +10,7 @@ describe("Generator", () => {
 
             let managerCard = Generator.generateCard(manager);
 
-            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Manager</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="email@example.com">email@example.com</a></a></li><li class="list-group-item">Office Number: 1</li></ul></div></div></div>`;
+            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Manager</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="mailto:email@example.com">email@example.com</a></a></li><li class="list-group-item">Office Number: 1</li></ul></div></div></div>`;
 
             expect(managerCard).toEqual(expected);
         });
@@ -20,7 +20,7 @@ describe("Generator", () => {
 
             let internCard = Generator.generateCard(intern);
 
-            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Intern</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="email@example.com">email@example.com</a></a></li><li class="list-group-item">School: exampleSchool</li></ul></div></div></div>`;
+            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Intern</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="mailto:email@example.com">email@example.com</a></a></li><li class="list-group-item">School: exampleSchool</li></ul></div></div></div>`;
 
             expect(internCard).toEqual(expected);
         });
@@ -30,9 +30,19 @@ describe("Generator", () => {
 
             let engineerCard = Generator.generateCard(engineer);
 
-            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Engineer</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="email@example.com">email@example.com</a></a></li><li class="list-group-item">Github: <a target="_blank" href="https://github.com/username">username</a></li></ul></div></div></div>`;
+            const expected = `<div class="col d-flex justify-content-center align-items-center"><div class="card" style="width: 18rem;"><div class="card-header"><div role="doc-subtitle" class="card-subtitle text-muted m-0">Engineer</div><h4 class="card-title m-0">Name</h4></div><div class="card-body"><ul class="list-group"><li class="list-group-item">ID: 0</li><li class="list-group-item">Email: <a target="_blank" href="mailto:email@example.com">email@example.com</a></a></li><li class="list-group-item">Github: <a target="_blank" href="https://github.com/username">username</a></li></ul></div></div></div>`;
 
             expect(engineerCard).toEqual(expected);
         });
     });
+
+    // describe("generateHtml", () => {
+    //     it("generates one card", () => {
+    //         let engineer = new Engineer(0, "Name", "email@example.com", "username");
+
+    //         return Generator.generateHtml([engineer]).then(data => {
+    //             expect(data).toBe("peanut butter");
+    //         });
+    //     });
+    // });
 });
